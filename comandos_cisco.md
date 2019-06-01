@@ -84,6 +84,8 @@
 
 (config-router)#network \<ip red> \<mask inv> area \<id area>
 
+### BANDWIDTH (Ancho Banda)
+(config-if)#bandwidth \<ancho de banda>
 
 ## Switch
 (config)#ip routing //habilita enrutamiento capa 2
