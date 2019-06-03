@@ -80,9 +80,17 @@
 
 ### OSPF
 
-(config)#router ospf \<id>
+(config)#router ospf <id>
 
-(config-router)#network \<ip red> \<mask inv> area \<id area>
+(config-router)#network <ip red> <mask inv> area <id area>
+
+(config-router) # router-id //para designar el router identificador
+
+(config)#bandwith //configuracion ancho de banda
+
+(config int) #ip ospf cost
+
+(config int) #ip ospf priority //entre 0-255 , 0 no sera designado ni de respaldo
 
 ### BANDWIDTH (Ancho Banda)
 (config-if)#bandwidth \<ancho de banda>
