@@ -66,10 +66,6 @@
 
 (config-router)# default information originate
 
-### Nota: Mask Inv = 255.255.255.255 - Máscara - Ejemplo: 255.255.255.255 - 255.255.255.252 = 0.0.0.3
-
-### Nota 2: Métrica = (Bandwidth - Delay) * 256 
-
 ### EIGRP
 
 (config)#router eigrp
@@ -77,6 +73,10 @@
 (config-router)#network \<ip red> \<mask inv>
  
 \#show ip eigrp neighbors
+
+### Nota: Mask Inv = 255.255.255.255 - Máscara - Ejemplo: 255.255.255.255 - 255.255.255.252 = 0.0.0.3
+
+### Nota 2: Métrica EIGRP = (Bandwidth - Delay) * 256 
 
 ### OSPF
 
@@ -91,6 +91,8 @@
 (config int) #ip ospf cost
 
 (config int) #ip ospf priority //entre 0-255 , 0 no sera designado ni de respaldo
+
+### Nota: Métrica OSPF = 10^8/Bandwidth 
 
 ### BANDWIDTH (Ancho Banda)
 (config-if)#bandwidth \<ancho de banda>
