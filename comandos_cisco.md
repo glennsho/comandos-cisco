@@ -62,13 +62,13 @@
 
 (config-router)#passive-interface <interface/serial> //bloquea el broadcast hacia la interfaz/serial, para bloquear donde no hayan router
 
-(config-router)# network \<ip red>  //si hay mas de una red se colocan todas, sin mascaras por ser protocolos con clase
+(config-router)# network <ip_red>  //si hay mas de una red se colocan todas, sin mascaras por ser protocolos con clase
 
-(config-router)# default information originate
+(config-router)# default information originate //Solo para el router que tenga una ruta por defecto a ISP
 
 ### EIGRP
 
-(config)#router eigrp
+(config)#router eigrp 1  //número 1 - id del proceso
 
 (config-router)#network \<ip red> \<mask inv>
  
